@@ -1,0 +1,49 @@
+<% if (page.sidebar) {%>
+<div class="row">
+  <div class="col-sm-8 col-xs-12">
+    <div class="post">
+      <article class="post-block">
+        <div class="post-info">
+          <i class="fa far fa-calendar-alt"></i> &nbsp;
+          <%- full_date(page.date,'ll') %>
+        </div>
+        <div class="post-content">
+            <%- page.content %>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="col-sm-4 col-xs-12 first-xs last-sm">
+    <%- partial('_partial/sidebar') %>
+  </div>
+</div>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'r3YaivYNnf2hkTvc0ASqu5uj-gzGzoHsz',
+        appKey: 'KN5Fbz1KKyhTd97NFYyFyQ9m'
+    })
+</script>
+<%} else {%>
+<div class="post">
+  <article class="post-block">
+    <div class="post-info">
+      <i class="fa far fa-calendar-alt"></i> &nbsp;
+      <%- full_date(page.date,'ll') %>
+    </div>
+    <div class="post-content">
+        <%- page.content %>
+    </div>
+  </article>
+</div>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'r3YaivYNnf2hkTvc0ASqu5uj-gzGzoHsz',
+        appKey: 'KN5Fbz1KKyhTd97NFYyFyQ9m'
+    })
+</script>
+
+<%}%>

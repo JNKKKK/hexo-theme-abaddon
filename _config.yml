@@ -1,0 +1,9 @@
+nav:
+    Blog: /
+    Archive: /archives/
+    About: /about/
+    Comments: /comments/
+    Rss: /atom.xml
+
+links:
+    Bowen Feng: http://bowenf.com

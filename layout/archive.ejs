@@ -1,0 +1,28 @@
+<%
+   var lastYear;
+   var lastMonth;
+%>
+<div class="row">
+  <div class="col-sm-8 col-xs-12">
+    <div class="archive">
+      <% site.posts.sort('date', 'desc').each(function(post){ %>
+        <% var year = post.date.year(); %>
+        <% var month = post.date.format('MM'); %>
+        <% if (lastYear != year) { %>
+            <% if (lastYear != null) { %>
+              <% lastMonth = null; %>
+            <% } %>
+            <% lastYear = year; %>
+            <h2 class="archive-year"><%= year %></h2>
+        <% } %>
+        <div class="post-item">
+          <div class="post-info"><%- full_date(post.date,'ll') %></div>
+          <a href="<%- url_for(post.path) %>" class="post-title-link"><%- post.title || __('posts.untitled') %></a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+  <div class="col-sm-4 col-xs-12 first-xs last-sm">
+    <%- partial('_partial/sidebar') %>
+  </div>
+</div>

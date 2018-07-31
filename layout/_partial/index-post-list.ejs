@@ -1,0 +1,24 @@
+<li class="post-list-item">
+    <article class="post-block">
+        <h2 class="post-title">
+            <a href="<%- url_for(post.path) %>" class="post-title-link"><%- post.title || __('posts.untitled') %></a>
+        </h2>
+        <div class="post-info">
+            <i class="far fa-calendar-alt"></i> &nbsp;
+            <%- full_date(post.date,'ll') %>
+            <% if (post.categories.length) { %>
+                &nbsp;|&nbsp;
+                <i class="fa far fa-folder"></i>
+                &nbsp;in&nbsp;
+            <% } %>
+            <%- post.categories.map(function(cate){
+                    return `<a class="category" href="${url_for(cate.path)}">${cate.name}</a>` 
+                }).join('&nbsp;/&nbsp;')
+            %>
+        </div>
+        <div class="post-content">
+            <%- post.excerpt %>
+        </div>
+        <a href="<%- url_for(post.path) %>" class="read-more"><%= __('more') %></a>
+    </article>
+</li>

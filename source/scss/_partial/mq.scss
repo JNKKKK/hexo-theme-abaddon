@@ -1,0 +1,55 @@
+main.container {
+    margin: 0 10px;
+}
+
+@media screen and (max-width: $sm-min-width) {
+    .wrap {
+        width: 100%;
+    }
+    main.container {
+        margin: 0 20px;
+    }
+    main.container,
+    .home.post-list,
+    .archive {
+        margin-top: 0;
+    }
+    .archive .post-item {
+        padding-left: 20px;
+    }
+    .post-content {
+        h2, h3, h4, h5, h6 {
+            max-width: 300px;
+            left: 15px;
+        }
+    }
+    .hide-on-mobile {
+        display: none !important;
+		width: 0;
+		height: 0;
+    }
+}
+@media screen and (min-width: $sm-min-width) {
+    .hide-on-desktop {
+        display: none !important;
+		width: 0;
+		height: 0;
+    }
+    .wrap {
+        width: 95%;
+        margin: 0 auto;
+    }
+    header {
+        padding: 20px 0px;
+    }
+}
+@media screen and (min-width: $md-min-width) {
+    .wrap {
+        width: 90%;
+    }
+}
+@media screen and (min-width: $lg-min-width) {
+    .wrap {
+        width: 1000px;
+    }
+}

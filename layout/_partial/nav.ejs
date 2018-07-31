@@ -1,0 +1,25 @@
+<nav id="menuToggle">
+    <div class="title"><h3><a href="<%=url_for('/')%>"><%=config.title%></a></h3></div>
+    <input type="checkbox" onclick="document.body.classList.toggle('lock-scroll');" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu" class="nav nav-list">
+        <li class="nav-list-item <%=is_home()||is_post()?'active':''%>">
+            <a href="<%=url_for(config.root)%>" target="_self">BLOG</a>  
+        </li>
+        <li class="nav-list-item <%=is_archive()?'active':''%>">
+            <a href="<%=url_for(config.archive_dir)%>" target="_self">ARCHIVE</a>  
+        </li>
+        <li class="nav-list-item <%=page.type=='about'?'active':''%>">
+            <a href="<%=url_for('/about/')%>" target="_self">ABOUT</a>  
+        </li>
+        <li class="nav-list-item <%=page.type=='comments'?'active':''%>">
+            <a href="<%=url_for('/comments/')%>" target="_self">COMMENTS</a>  
+        </li>
+        <li class="nav-list-item">
+            <a href="<%=url_for('/atom.xml')%>" target="_self">RSS</a>  
+        </li>
+    </ul>
+</nav>
+

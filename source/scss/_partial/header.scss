@@ -1,0 +1,169 @@
+@media screen and (max-width: $sm-min-width) {
+    header {
+        padding: 0;
+    }
+    #menuToggle
+    {
+        display: block;
+        height: 49px;
+        box-shadow: 0px 1px 1px #ccc;      
+        -webkit-user-select: none;
+        user-select: none;
+        .title {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            h3 {
+                padding: 10px 0 10px 0;
+                margin:0;
+            }
+        }
+        input
+        {
+            display: block;
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+            opacity: 0; /* hide this */
+            z-index: 3; /* and place it over the hamburger */
+            -webkit-touch-callout: none;
+        }
+        span
+        {
+            display: block;
+            z-index: 2;
+            width: 30px;
+            height: 3px;
+            margin-bottom: 5px;
+            position: relative;
+            left:10px;
+            top:-35px;
+            background: #cdcdcd;
+            border-radius: 3px;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                        opacity 0.55s ease;
+        }
+        span:first-child
+        {
+            transform-origin: 0% 0%;
+        }
+        span:nth-last-child(2)
+        {
+            transform-origin: 0% 100%;
+        }
+        /*Transform all the slices of hamburger
+        * into a crossmark.*/
+        input:checked ~ span
+        {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+        /*But let's hide the middle one.*/
+        input:checked ~ span:nth-last-child(3)
+        {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        /*Ohyeah and the last one should go the other direction*/
+        input:checked ~ span:nth-last-child(2)
+        {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+        ul {
+            position: absolute;
+            z-index: 1;
+            top:0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            padding: 50px 0 0 30px;      
+            background: #ededed;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            /* to stop flickering of text in safari */
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        }
+    }  
+    /*And let's slide it in from the left  */
+    #menuToggle input:checked ~ ul
+    {
+      transform: none;
+    }
+    .nav-list-item {
+        display: block;
+        border-bottom: 5px solid #ededed;
+        margin-bottom: 10px;
+
+        &.active {
+            border-bottom: 5px solid #42b983;
+        }
+
+        &:hover {
+            border-bottom: 5px solid #42b983;
+        }
+        a {
+            display: inline-block;
+            font-size: 20px;
+            line-height: 1.4;
+            font-weight: 100;
+            padding: 5px 5px;
+            width: 100%;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+    }
+}
+
+@media screen and (min-width: $sm-min-width) {
+    #menuToggle {
+        input,span,.title {
+            display: none !important;
+            width: 0;
+            height: 0;
+        }
+    }
+    header {
+        min-height: 60px;
+    
+        .nav {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        .nav-list-item {
+            display: inline-block;
+            border-bottom: 5px solid white;
+    
+            &.active {
+                border-bottom: 5px solid #42b983;
+            }
+    
+            &:hover {
+                border-bottom: 5px solid #42b983;
+            }
+            a {
+                display: inline-block;
+                font-size: 20px;
+                line-height: 1.4;
+                font-weight: 100;
+                padding: 15px  10px ;
+                
+            }
+        }
+    }
+
+}
+
+
+
+

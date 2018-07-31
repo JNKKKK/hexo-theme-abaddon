@@ -1,0 +1,64 @@
+<div class="sidebar">
+    <div class="info-section row  hide-on-mobile">
+        <div class="col-xs-8">
+            <p class="name"><%=config.author%></p>
+            <p class="url"><%=config.url%></p>
+        </div>
+        <div class="col-xs-4">
+            <img src="https://i.loli.net/2018/07/24/5b56e08be72b9.jpg">
+        </div>
+    </div>
+    <div class="count-section row hide-on-mobile">
+        <div class="col-xs-4">
+            <a href="<%= url_for(config.archive_dir)%>">
+                <span class="count"><%=site.posts.length%></span>
+                <span class="name">posts</span>
+            </a>
+        </div>
+        <div class="col-xs-4">
+            <a href="<%= url_for(config.category_dir)%>">
+                <span class="count"><%=site.categories.length%></span>
+                <span class="name">categories</span>
+            </a>
+        </div>
+        <div class="col-xs-4">
+            <a href="<%= url_for(config.tag_dir)%>">
+                <span class="count"><%=site.tags.length%></span>
+                <span class="name">tags</span>
+            </a>
+        </div>
+    </div>
+    <div class="count-section row hide-on-desktop">
+        <div class="col-xs-3">
+            <a href="<%= url_for(config.archive_dir)%>">
+                <span class="count"><%=site.posts.length%></span>
+                <span class="name">posts</span>
+            </a>
+        </div>
+        <div class="col-xs-3">
+            <a href="<%= url_for(config.category_dir)%>">
+                <span class="count"><%=site.categories.length%></span>
+                <span class="name">categories</span>
+            </a>
+        </div>
+        <div class="col-xs-3">
+            <a href="<%= url_for(config.tag_dir)%>">
+                <span class="count"><%=site.tags.length%></span>
+                <span class="name">tags</span>
+            </a>
+        </div>
+        <div class="col-xs-3">
+            <img src="https://i.loli.net/2018/07/24/5b56e08be72b9.jpg">
+        </div>
+    </div>
+    <div class="links-section hide-on-mobile">
+        <div class="links-title">
+            <p>LINKS</p>
+        </div>
+        <div class="link-container">
+        <% for (var prop in theme.links) { %>
+        <a href="<%=theme.links[prop]%>" target="_self"><%=prop%></a>  
+        <% } %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="post">
+  <article class="post-block">
+    <h1 class="post-title"><%=page.title%></h1>
+    <div class="post-info">
+      <i class="far fa-calendar-alt"></i> &nbsp;
+      <%- full_date(page.date,'ll') %>
+      <% if (page.categories.length) { %>
+          &nbsp;|&nbsp;
+          <i class="fa far fa-folder"></i>
+          &nbsp;in&nbsp;
+      <% } %>
+      <%- page.categories.map(function(cate){
+              return `<a class="category" href="${url_for(cate.path)}">${cate.name}</a>` 
+          }).join(',&nbsp;')
+      %>
+    </div>
+    <div class="post-content">
+        <%- page.content %>
+    </div>
+  </article>
+  <div class="post-tags">
+    <%- page.tags.map(function(tag){
+      return `<a class="tag" href="${url_for(tag.path)}"><i class="fa fas fa-tag"></i> ${tag.name}</a>` 
+    }).join('&nbsp;&nbsp;&nbsp;')
+    %>
+  </div>
+</div>
+<div class="paginator">
+  <%
+  var prev = page.prev ? page.prev.path : false;
+  var next = page.next ? page.next.path : false; 
+  %>
+  <% if (prev) { %>
+    <a class="prev" href="<%- url_for(prev) %>"><%=__('prev_post')%></a>
+  <% } %>
+  <% if (next) { %>
+  <a class="next" href="<%- url_for(next) %>"><%=__('next_post')%></a>
+  <% } %>
+</div>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'r3YaivYNnf2hkTvc0ASqu5uj-gzGzoHsz',
+        appKey: 'KN5Fbz1KKyhTd97NFYyFyQ9m'
+    })
+</script>

@@ -4,7 +4,7 @@
     }
     .post-list-item {
         padding: 1em 0 2em;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $border-color;
         &:last-child {
             border-bottom: 0px;
         }
@@ -20,6 +20,6 @@
         }
     }
     .read-more {     
-        color: #42b983;
+        color: $theme-color;
     }
 }

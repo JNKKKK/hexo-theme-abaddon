@@ -2,7 +2,7 @@
     .tag-title {
         font-size: 1.5em;
         small {
-            color: #666;
+            color: $subtle-text-color;
         }
     }
 }
@@ -20,7 +20,7 @@
         margin-bottom: 5px;
     }
     .tag-list-count {
-        color: #666;
+        color: $subtle-text-color;
         &:before{
             content: " (";
         }
@@ -29,6 +29,6 @@
         }
     }
     a.tag-list-link {
-        border-bottom: 1px solid #999;
+        border-bottom: 1px solid $text-underline-color;
     }
 }

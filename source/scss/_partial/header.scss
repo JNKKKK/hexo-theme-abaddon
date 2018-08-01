@@ -6,7 +6,7 @@
     {
         display: block;
         height: 49px;
-        box-shadow: 0px 1px 1px #ccc;      
+        box-shadow: 0px 1px 1px $nav-shadow;      
         -webkit-user-select: none;
         user-select: none;
         .title {
@@ -42,7 +42,7 @@
             position: relative;
             left:10px;
             top:-35px;
-            background: #cdcdcd;
+            background: $hamburger-color;
             border-radius: 3px;
             transform-origin: 4px 0px;
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -63,7 +63,7 @@
         {
             opacity: 1;
             transform: rotate(45deg) translate(-2px, -1px);
-            background: #232323;
+            background: $crossmark-color;
         }
         /*But let's hide the middle one.*/
         input:checked ~ span:nth-last-child(3)
@@ -84,7 +84,7 @@
             width: 60%;
             height: 100%;
             padding: 50px 0 0 30px;      
-            background: #ededed;
+            background: $mobile-nav-bg-color;
             list-style-type: none;
             -webkit-font-smoothing: antialiased;
             /* to stop flickering of text in safari */
@@ -100,15 +100,15 @@
     }
     .nav-list-item {
         display: block;
-        border-bottom: 5px solid #ededed;
+        border-bottom: 5px solid $mobile-nav-bg-color;
         margin-bottom: 10px;
 
         &.active {
-            border-bottom: 5px solid #42b983;
+            border-bottom: 5px solid $theme-color;
         }
 
         &:hover {
-            border-bottom: 5px solid #42b983;
+            border-bottom: 5px solid $theme-color;
         }
         a {
             display: inline-block;
@@ -137,19 +137,19 @@
     
         .nav {
             width: 100%;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid $border-color;
         }
     
         .nav-list-item {
             display: inline-block;
-            border-bottom: 5px solid white;
+            border-bottom: 5px solid $body-bg-color;
     
             &.active {
-                border-bottom: 5px solid #42b983;
+                border-bottom: 5px solid $theme-color;
             }
     
             &:hover {
-                border-bottom: 5px solid #42b983;
+                border-bottom: 5px solid $theme-color;
             }
             a {
                 display: inline-block;

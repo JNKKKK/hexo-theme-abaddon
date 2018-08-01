@@ -13,14 +13,6 @@
 @import "_partial/sidebar";
 @import "_partial/category";
 @import "_partial/tag";
+@import "_partial/icon";
 
-// @import "_partial/simplegrid";
 @import "_partial/flexboxgrid";
-
-@font-face {
-    font-family: 'sourcesanspro';
-    src: url('../font/sourcesanspro.woff2') format('woff2'),
-         url('../font/sourcesanspro.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}

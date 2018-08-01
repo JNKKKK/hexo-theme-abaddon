@@ -13,7 +13,7 @@
             font-size: 20px;
         }
         .url {
-            color: #666;
+            color: $subtle-text-color;
         }
         img {
             width: 93px;
@@ -22,7 +22,7 @@
         }
     }
     .count-section {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $border-color;
         @media screen and (max-width: $sm-min-width) {
             .col-xs-3 {
                 height: 50px;
@@ -37,7 +37,7 @@
         padding: 10px 0 10px 0;
         .col-xs-4, .col-xs-3 {
             padding: 0;
-            border-right: 1px solid #eee;
+            border-right: 1px solid $border-color;
         }
         .col-xs-4:last-child, .col-xs-3:nth-child(3), .col-xs-3:last-child {
             border-right: none;
@@ -49,13 +49,13 @@
             } 
             span.name {
                display: block;
-               color: #888;
+               color: $subtle-text-color;
             }
         }
     }
     .links-section {
         .links-title {
-            border-left: 3px solid #42b983;
+            border-left: 3px solid $theme-color;
             p {
                 padding-left: 10px;
             }

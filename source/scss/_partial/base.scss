@@ -1,6 +1,6 @@
 ::selection {
-    color: #FFFFFF;
-    background-color: #42b983;
+    color: $selection-color;
+    background-color: $theme-color;
 }
 
 html, body {
@@ -10,11 +10,11 @@ html, body {
 
 body {
     margin: 0;
-    color: #34495e;
+    color: $text-color;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #fff;
-    font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif;
+    background-color: $body-bg-color;
+    font-family: 'Palatino Linotype','Palatino', 'Helvetica Neue', Arial, sans-serif;
 }
 
 ul.nav,
@@ -29,12 +29,12 @@ ul {
 }
 
 a, a:active {
-    color: #2c3e50;
+    color: $title-link-color;
     text-decoration: none;
 }
 
 a.post-title-link:hover {
-    border-bottom: 2px solid #42b983;
+    border-bottom: 2px solid $theme-color;
 }
 
 hr {
@@ -44,7 +44,7 @@ hr {
 code {
     margin: 0 2px;
     padding: 3px 5px;
-    color: #e96900;
+    color: $code-color;
     border-radius: 2px;
     white-space: inherit;
 }
@@ -59,7 +59,7 @@ table {
     width: 100%;
     margin: 1em auto;
     thead {
-        background-color: #ddd;
+        background-color: $thead-bg-color;
         th {
             padding: 5px;
             min-width: 20px;
@@ -67,7 +67,7 @@ table {
     }
     tbody {
         tr:nth-child(2n) {
-            background-color: #eee;
+            background-color: $tbody-bg-color;
         }
         td {
             padding: 5px;

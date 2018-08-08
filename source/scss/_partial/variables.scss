@@ -3,30 +3,31 @@ $sm-min-width: 48em;
 $md-min-width: 64em;
 $lg-min-width: 75em;
 
-$theme-color: #42b983;
-$theme-color-hover: #267B54;
-$text-color: #34495e;
-$text-underline-color: #999;
-$subtle-text-color: #7f8c8d;
-$title-link-color: #2c3e50;
-$code-color: #e96900;
-$thead-bg-color: #ddd;
-$tbody-bg-color: #eee;
-$border-color: #ddd;
-$body-bg-color: white;
+$theme-color: #51A785; // set 1
+$theme-color-hover: #2C7151; // set 1
+$text-color: #1E1D1B; // set 1
+$text-underline-color: #000000; // set 1
+$subtle-text-color: #79746E; // set 1
+$title-link-color: #000000; // set 1
+$code-color: #0C412C; // set 1
+$thead-bg-color: red; // test
+$tbody-bg-color: blue; // test
+$border-color: #E9E5D3; // set 1
+//$body-bg-color: #FFEBCD; // blanchedalmond
+$body-bg-color: #FEF6E6; // set 1
 // copyright
-$copyright-text-color: #aaa;
-$copyright-text-hover-color: #888;
+$copyright-text-color: #C3C1B4; // set 1
+$copyright-text-hover-color: #5D543C; // set 1
 // paginator-button
-$paginator-button-bg: #4fc08d;
-$paginator-button-color: white;
-$paginator-button-border: #3aa373;
-$paginator-button-bg-hover: #22bd77;
+$paginator-button-bg: #51A785; // set 1
+$paginator-button-color: white; // set 1
+$paginator-button-border: #2C7151; // set 1
+$paginator-button-bg-hover: #22bd77; // set 1
 // selection
-$selection-color: #FFFFFF;
-$selection-bg-color: $theme-color;
+$selection-color: white; // set 1
+$selection-bg-color: $theme-color; // set 1
 // navbar
-$nav-shadow: #ccc;
-$hamburger-color: #cdcdcd;
-$crossmark-color: #232323;
-$mobile-nav-bg-color: #ededed;
+$nav-shadow: $border-color; // set 1
+$hamburger-color: $theme-color; // set 1
+$crossmark-color: $title-link-color; // set 1
+$mobile-nav-bg-color: #AEF7CE;

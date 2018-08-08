@@ -5,7 +5,7 @@
             <p class="url"><%=config.url%></p>
         </div>
         <div class="col-xs-4">
-            <img src="https://i.loli.net/2018/07/24/5b56e08be72b9.jpg">
+            <img src="<%= url_for(theme.sidebar.avatar)%>">
         </div>
     </div>
     <div class="count-section row hide-on-mobile">
@@ -48,7 +48,7 @@
             </a>
         </div>
         <div class="col-xs-3">
-            <img src="https://i.loli.net/2018/07/24/5b56e08be72b9.jpg">
+            <img src="<%= url_for(theme.sidebar.avatar)%>">
         </div>
     </div>
     <div class="links-section hide-on-mobile">
@@ -56,8 +56,8 @@
             <p>LINKS</p>
         </div>
         <div class="link-container">
-            <% for (var prop in theme.links) { %>
-            <a href="<%=theme.links[prop]%>" target="_self"><%=prop%></a>  
+            <% for (var prop in theme.sidebar.links) { %>
+            <a href="<%=theme.sidebar.links[prop]%>" target="_self"><%=prop%></a> 
             <% } %>
         </div>
     </div>

@@ -13,7 +13,7 @@
     .post-title {
         margin: 0.65em 0;
         color: $title-link-color;
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .post-info {
@@ -37,15 +37,15 @@
     h2, h3, h4, h5, h6 {
         position: relative;
         margin: 1em 0;
-        &:before {
-            content: "#";
-            color: $theme-color;
-            position: absolute;
-            left: -0.7em;
-            top: -4px;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
+        // &:before {
+        //     content: "#";
+        //     color: $theme-color;
+        //     position: absolute;
+        //     left: -0.7em;
+        //     top: -4px;
+        //     font-size: 1.2em;
+        //     font-weight: bold;
+        // }
     }
     h4, h5, h6 {
         a:before {
@@ -124,7 +124,7 @@
 code,
 pre {
     font-size: 0.8em;
-    background-color: #f8f8f8;
+    background-color: white;
     font-family: 'Roboto Mono', Monaco, courier, monospace;
 }
 

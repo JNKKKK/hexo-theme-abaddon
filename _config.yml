@@ -1,9 +1,26 @@
-nav:
-    Blog: /
-    Archive: /archives/
-    About: /about/
-    Comments: /comments/
-    Rss: /atom.xml
+theme: Abaddon
+v: 1.0.1
 
-links:
-    Bowen Feng: http://bowenf.com
+nav:
+  menu:
+    home: / || home
+    about: /about/ || about
+    tags: /tags/ || tags
+    categories: /categories/ || categories
+    archives: /archives/ || archives
+    #comments: /comments/ || comments
+    #rss: /atom.xml || rss
+    #example: /example/ || example
+
+sidebar:
+  avatar: /images/avatar.jpg
+  social:
+
+  links:
+    Example: https://example.com
+
+footer: 
+  powered: true
+  theme: 
+    enable: true
+    version: true

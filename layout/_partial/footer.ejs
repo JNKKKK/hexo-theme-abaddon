@@ -1,13 +1,18 @@
 <footer>
     <div class="copyright">
         <p>
-            © <%= (new Date()).getFullYear() %>
-            <a href="<%=config.url%>"><%=config.author%></a>
-            , powered by 
-            <a href="https://hexo.io/" target="_blank">Hexo</a>
-             and 
-            <a href="https://github.com/JNKKKK/hexo-theme-abaddon" target="_blank">Abaddon</a>
-            .
+            Copyright © <%= (new Date()).getFullYear() %> <a href="<%=config.url%>"><%=config.author%></a>. All Rights Reserved. 
         </p>
+        <% if(theme.footer.powered) { %>
+        	<p>
+            	Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> 
+            	<% if(theme.footer.theme.enable) { %>
+            		and <a href="https://github.com/JNKKKK/hexo-theme-abaddon" target="_blank">Abaddon</a> 
+            	<% } %>
+            	<% if(theme.footer.theme.version) { %>
+            		v<%=theme.v%>
+            	<% } %>
+        	</p>
+        <% } %>
     </div>
-</footer>
+</footer> 
